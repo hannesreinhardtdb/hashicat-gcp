@@ -8,8 +8,8 @@ module "vpc" {
 
    subnets = [
   {
-    subnet_name   = "khr-subnet"
-    subnet_ip     = "10.100.75.0/24"
+    subnet_name   = "khr-subnet-1"
+    subnet_ip     = "10.100.89.0/24"
     subnet_region = var.region
           },
         {
