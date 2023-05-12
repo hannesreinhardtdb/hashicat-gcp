@@ -2,6 +2,9 @@ module "vpc" {
     source  = "terraform-google-modules/network/google"
     version = "~> 3.4"
 
+    project_id = var.project_id
+    network_name = "gaurav"
+
    subnets = [
   {
     subnet_name   = "gaurav-subnet"
@@ -28,4 +31,4 @@ module "vpc" {
         },
     ]
 }
-#9th
+#10th
