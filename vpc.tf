@@ -14,7 +14,7 @@ module "vpc" {
           },
         {
             subnet_name           = "khr-subnet-02"
-            subnet_ip             = "10.10.20.0/24"
+            subnet_ip             = "10.10.80.0/24"
             subnet_region         = var.region
             subnet_private_access = "true"
             subnet_flow_logs      = "true"
@@ -22,7 +22,7 @@ module "vpc" {
         },
         {
             subnet_name               = "khr-subnet-03"
-            subnet_ip                 = "10.10.30.0/24"
+            subnet_ip                 = "10.10.90.0/24"
             subnet_region             = var.region
             subnet_flow_logs          = "true"
             subnet_flow_logs_interval = "INTERVAL_10_MIN"
@@ -44,7 +44,7 @@ module "vpc" {
         {
             name                   = "khr-app-proxy"
             description            = "route through proxy to reach app"
-            destination_range      = "10.50.10.0/24"
+            destination_range      = "10.50.20.0/24"
             tags                   = "khr-app-proxy"
             next_hop_instance      = "khr-app-proxy-instance"
             next_hop_instance_zone = var.zone
