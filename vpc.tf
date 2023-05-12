@@ -41,13 +41,13 @@ module "vpc" {
             tags                   = "egress-inet"
             next_hop_internet      = "true"
         },
-        {
-            name                   = "khr-app-proxy"
-            description            = "route through proxy to reach app"
-            destination_range      = "10.50.20.0/24"
-            tags                   = "khr-app-proxy"
-            next_hop_instance      = "khr-app-proxy-instance"
-            next_hop_instance_zone = var.zone
-        },
+#        {
+ #           name                   = "khr-app-proxy"
+  #          description            = "route through proxy to reach app"
+   #         destination_range      = "10.50.20.0/24"
+    #        tags                   = "khr-app-proxy"
+     #       next_hop_instance      = "khr-app-proxy-instance"
+      #      next_hop_instance_zone = var.zone
+       # },
     ]
 }
