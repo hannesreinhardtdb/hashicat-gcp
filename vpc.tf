@@ -2,10 +2,6 @@ module "vpc" {
     source  = "terraform-google-modules/network/google"
     version = "~> 3.4"
 
-    project_id   = "<PROJECT ID>"
-    network_name = "example-vpc"
-    routing_mode = "GLOBAL"
-
    subnets = [
   {
     subnet_name   = "gaurav-subnet"
@@ -28,8 +24,8 @@ module "vpc" {
             destination_range      = "10.50.10.0/24"
             tags                   = "app-proxy"
             next_hop_instance      = "app-proxy-instance"
-            next_hop_instance_zone = "europe-west3-b"
+            next_hop_instance_zone = var.zone
         },
     ]
 }
-#8th
+#9th
